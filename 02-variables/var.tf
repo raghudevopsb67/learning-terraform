@@ -67,8 +67,12 @@ output "sample7" {
 }
 
 ## Pick a variable from SHELL ENV VARIABLE
+#  export TF_VAR_sample8=1234
 variable "sample8" {}
 output "sample8" {
   value = var.sample8
 }
+
+
+variable "sample9" {}
 
