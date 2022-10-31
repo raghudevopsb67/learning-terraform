@@ -49,4 +49,9 @@ output "sample4" {
   value = var.sample4[0]
 }
 
+## Access a Map value
+output "sample5" {
+  value = var.sample5["number"]
+}
+
 
