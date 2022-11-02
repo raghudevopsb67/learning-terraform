@@ -1,12 +1,12 @@
 //resource "aws_instance" "sample" {
 //  count         = length(var.instances)
 //  ami           = "ami-00d48a21603b2119b"
-//  instance_type = "t3.micro"
+//  instance_type = element(var.instances, count.index)
 //  tags = {
 //    Name = element(var.instances, count.index)
 //  }
 //}
-//
+
 
 variable "instances" {
   default = {
@@ -23,5 +23,5 @@ variable "instances" {
 }
 
 output "count" {
-  value = length(var.instances)
+  value = element(var.instances, 0)
 }
