@@ -57,5 +57,5 @@ variable "map1" {
 }
 
 output "map1" {
-  value = [for k, v in var.map : "Color Code - ${k} | Color - ${v}"]
+  value = [for k, v in var.map1 : "Color Code - ${k} | Color - ${v}"]
 }
