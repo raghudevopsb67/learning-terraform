@@ -66,7 +66,7 @@ variable "create_sg" {
 }
 
 resource "null_resource" "test" {
-  provisioner "local" {
+  provisioner "local-exec" {
     command = "echo hello world"
   }
 }
