@@ -12,14 +12,16 @@ variable "instances" {
   default = {
     catalogue = {
       instance_type = "t3.micro"
-      tagName = "CATALOGUE"
+      tagName       = "CATALOGUE"
     }
     cart = {
       instance_type = "t3.micro"
-      tagName = "CART"
+      tagName       = "CART"
     }
 
   }
 }
 
-outp
+output "count" {
+  value = length(var.instances)
+}
