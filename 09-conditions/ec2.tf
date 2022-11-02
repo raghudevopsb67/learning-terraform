@@ -36,5 +36,5 @@ resource "aws_security_group" "allow_ssh" {
 }
 
 variable "create_sg" {
-  default = false
+  default = true
 }
