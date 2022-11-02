@@ -59,3 +59,4 @@ variable "map1" {
 output "map1" {
   value = [for k, v in var.map1 : "Color Code - ${v.color_code} | Color - ${v.color}"]
 }
+
