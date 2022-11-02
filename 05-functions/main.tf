@@ -22,3 +22,12 @@ variable "sample1" {
 output "sample1" {
   value = lookup(lookup(var.sample1, "apple", null), "count", 0)
 }
+
+variable "list" {
+  default = ["a", "b", "c"]
+}
+
+output "list" {
+  value = [for s in var.list : upper(s)]
+}
+
